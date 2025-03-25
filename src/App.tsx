@@ -4,6 +4,11 @@ import Layout from './Layout';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
+  console.log("Cookie is : ", document.cookie);
+  setTimeout(() => {
+
+    document.cookie = "test_cookie=HelloWorld; path=/; max-age=3600"; 
+  }, 10000 )
  
   const {login, logout,  isAuthenticated : isKindeAuthenticated , isLoading : isKindeAuthLoading ,  user: kindeUser } = useKindeAuth();
   console.log("######## states from kinde");
