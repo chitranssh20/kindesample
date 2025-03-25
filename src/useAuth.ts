@@ -16,6 +16,7 @@ useEffect(() => {
 }, [isKindeAuthLoading, isKindeAuthenticated])
 
 useEffect(() => {
+    console.log("setting kinde user: ", kindeUser);
     setUser(kindeUser)
 }, [kindeUser])
 

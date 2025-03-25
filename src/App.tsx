@@ -5,9 +5,11 @@ import useAuth from './useAuth';
 
 function App() {
   const {isAuthLoading, isAuthenticated, user} = useAuth();
+  console.log("##### states from useauth");
   console.log(isAuthLoading, isAuthenticated);
   console.log(user);
   const {login, logout,  isAuthenticated : isKindeAuthenticated , isLoading : isKindeAuthLoading ,  user: kindeUser } = useKindeAuth();
+  console.log("######## states from kinde");
   console.log(isKindeAuthLoading, isKindeAuthenticated)
   console.log("user is : ", kindeUser);
   return (
