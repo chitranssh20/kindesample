@@ -1,4 +1,5 @@
 import useAuth from './useAuth';
+
 const Layout = () => {
     const {isAuthLoading, isAuthenticated, user} = useAuth();
     console.log("##### states from useauth");
