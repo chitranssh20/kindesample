@@ -13,6 +13,7 @@ function App() {
     <Layout />
       <h1>AUthentication state is : `{isKindeAuthLoading}` </h1>
       <h1>AUthentication state is : `{isKindeAuthenticated}` </h1>
+      {kindeUser?.id}
       <button onClick={() => login()} >Login</button>
       <button onClick={() => logout()} > Log out</button>
     </>

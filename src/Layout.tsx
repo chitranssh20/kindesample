@@ -6,6 +6,8 @@ const Layout = () => {
     console.log(user);
     return (
         <>
+        <h1> User id is </h1>
+         {user?.id}
         </>
     )
 }
