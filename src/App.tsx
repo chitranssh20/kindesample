@@ -1,19 +1,16 @@
 import './App.css'
 import { useKindeAuth } from '@kinde-oss/kinde-auth-react'
-import useAuth from './useAuth';
-
+import Layout from './Layout';
 
 function App() {
-  const {isAuthLoading, isAuthenticated, user} = useAuth();
-  console.log("##### states from useauth");
-  console.log(isAuthLoading, isAuthenticated);
-  console.log(user);
+ 
   const {login, logout,  isAuthenticated : isKindeAuthenticated , isLoading : isKindeAuthLoading ,  user: kindeUser } = useKindeAuth();
   console.log("######## states from kinde");
   console.log(isKindeAuthLoading, isKindeAuthenticated)
   console.log("user is : ", kindeUser);
   return (
     <>
+    <Layout />
       <h1>AUthentication state is : `{isKindeAuthLoading}` </h1>
       <h1>AUthentication state is : `{isKindeAuthenticated}` </h1>
       <button onClick={() => login()} >Login</button>
