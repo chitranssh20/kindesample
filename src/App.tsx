@@ -4,6 +4,7 @@ import { useKindeAuth } from '@kinde-oss/kinde-auth-react'
 
 function App() {
   const {login, logout,  isAuthenticated : isKindeAuthenticated , isLoading : isKindeAuthLoading ,  user: kindeUser } = useKindeAuth();
+  console.log(isKindeAuthLoading, isKindeAuthenticated)
   console.log("user is : ", kindeUser);
   return (
     <>
